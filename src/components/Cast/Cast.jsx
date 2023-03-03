@@ -9,6 +9,7 @@ import {
   TextCast,
   Wrapper,
 } from './Cast.styled';
+import PropTypes from 'prop-types';
 
 export default function Cast() {
   const [actors, setActors] = useState(null);
@@ -61,3 +62,10 @@ export default function Cast() {
     </>
   );
 }
+
+Cast.propTypes = {
+  profile_path: PropTypes.string,
+  name: PropTypes.string,
+  character: PropTypes.string,
+  id: PropTypes.number,
+};

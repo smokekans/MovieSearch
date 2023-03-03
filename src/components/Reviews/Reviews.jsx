@@ -9,6 +9,7 @@ import {
   TextReviews,
   Wrapper,
 } from './Reviews.styled';
+import PropTypes from 'prop-types';
 
 export default function Reviews() {
   const [reviews, setReviews] = useState(null);
@@ -52,3 +53,9 @@ export default function Reviews() {
     </>
   );
 }
+
+Reviews.propTypes = {
+  author: PropTypes.string,
+  content: PropTypes.string,
+  id: PropTypes.number,
+};

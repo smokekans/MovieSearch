@@ -11,6 +11,7 @@ import {
   Text,
   Title,
 } from './MovieInfo.styled';
+import PropTypes from 'prop-types';
 
 export default function MovieInfo({ movieData }) {
   const { poster_path, original_title, vote_average, overview, genres } =
@@ -50,3 +51,11 @@ export default function MovieInfo({ movieData }) {
     </>
   );
 }
+
+MovieInfo.propTypes = {
+  vote_average: PropTypes.number,
+  original_title: PropTypes.string,
+  overview: PropTypes.string,
+  poster_path: PropTypes.string,
+  genres: PropTypes.string,
+};

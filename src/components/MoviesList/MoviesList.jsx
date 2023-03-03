@@ -5,6 +5,7 @@ import {
   ListMovies,
   LinkMovies,
 } from './MoviesList.styled';
+import PropTypes from 'prop-types';
 
 export default function MoviesList({ trandingMovies }) {
   const location = useLocation();
@@ -38,3 +39,15 @@ export default function MoviesList({ trandingMovies }) {
     </>
   );
 }
+
+MoviesList.propTypes = {
+  trandingMovies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      name: PropTypes.string,
+      poster_path: PropTypes.string,
+      backdrop_path: PropTypes.string,
+    })
+  ),
+};
