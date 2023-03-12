@@ -1,1 +1,1 @@
-goit-react-hw-05-movies
+A movie search app
